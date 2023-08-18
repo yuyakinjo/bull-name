@@ -3,8 +3,19 @@ import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
 ---
 
-<Layout title="あるブルドッグのニックネーム">
-  <main><Card /></main>
+<Layout title="あるブルドッグの名前">
+  <main class="grid grid-rows-1 auto-cols-max gap-2 p-4">
+    <Card
+      title="ハリボー"
+      body="生まれたときにご主人様からもらった名前"
+      categories={['本名']}
+    />
+    <Card
+      title="へっこき犬"
+      body="最近、へをこいていなくなる犬"
+      categories={['くさいね']}
+    />
+  </main>
 </Layout>
 
 <style></style>
