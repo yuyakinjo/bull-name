@@ -4,7 +4,7 @@ import Card from '../components/Card.astro';
 ---
 
 <Layout title="あるブルドッグの名前">
-  <main class="grid grid-rows-1 auto-cols-max gap-2 p-4">
+  <main class="grid grid-rows-2 gap-4 p-4 justify-center">
     <Card
       title="ハリボー"
       body="生まれたときにご主人様からもらった名前"
@@ -15,6 +15,17 @@ import Card from '../components/Card.astro';
       body="最近、へをこいていなくなる犬"
       categories={['くさいね']}
     />
+    <Card
+      title="正岡子規"
+      body="嫌いなお風呂に連れて行かれそうになった時に目を合わせないね"
+      categories={['お風呂きらいね']}
+    />
+    <Card
+      title="ボー太郎"
+      body="ボーっとしているからね"
+      categories={['眠いね']}
+    />
+    <Card title="太郎" body="ボー太郎の短縮ね" categories={['眠いね']} />
   </main>
 </Layout>
 
