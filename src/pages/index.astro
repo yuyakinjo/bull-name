@@ -1,31 +1,39 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
+
+const cards = [
+  {
+    title: 'ハリボー',
+    body: '生まれたときにご主人様からもらった名前',
+    categories: ['本名'],
+  },
+  {
+    title: 'へっこき犬',
+    body: '最近、へをこいていなくなる犬',
+    categories: ['くさいね'],
+  },
+  {
+    title: '正岡子規',
+    body: '嫌いなお風呂に連れて行かれそうになった時に目を合わせないね',
+    categories: ['お風呂きらいね'],
+  },
+  {
+    title: 'ボー太郎',
+    body: 'ボーっとしているからね',
+    categories: ['眠いね'],
+  },
+  {
+    title: '太郎',
+    body: 'ボー太郎の短縮ね',
+    categories: ['面倒くさいね'],
+  },
+];
 ---
 
 <Layout title="あるブルドッグの名前">
   <main class="grid grid-rows-2 gap-4 p-4 justify-center">
-    <Card
-      title="ハリボー"
-      body="生まれたときにご主人様からもらった名前"
-      categories={['本名']}
-    />
-    <Card
-      title="へっこき犬"
-      body="最近、へをこいていなくなる犬"
-      categories={['くさいね']}
-    />
-    <Card
-      title="正岡子規"
-      body="嫌いなお風呂に連れて行かれそうになった時に目を合わせないね"
-      categories={['お風呂きらいね']}
-    />
-    <Card
-      title="ボー太郎"
-      body="ボーっとしているからね"
-      categories={['眠いね']}
-    />
-    <Card title="太郎" body="ボー太郎の短縮ね" categories={['眠いね']} />
+    {cards.map((card) => <Card {...card} />)}
   </main>
 </Layout>
 
